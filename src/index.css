@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #0f766e
+  );
+  color:white;
+}
+
+#root{
+  width:100%;
+  max-width:1200px;
+  padding:30px;
+}
+
+.dashboard{
+  text-align:center;
+}
+
+.dashboard-title{
+  font-size:3rem;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.dashboard-subtitle{
+  color:#cbd5e1;
+  margin-bottom:40px;
+}
+
+.card-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.sensor-card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:25px;
+  padding:30px;
+  transition:.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.sensor-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.sensor-icon{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+.sensor-name{
+  font-size:1.3rem;
+  color:#e2e8f0;
+  margin-bottom:10px;
+}
+
+.sensor-value{
+  font-size:3rem;
+  font-weight:700;
+}
+
+.temp{
+  color:#f97316;
+}
+
+.humidity{
+  color:#38bdf8;
+}
+
+.gas{
+  color:#22c55e;
+}
+
+.status{
+  margin-top:15px;
+  font-size:.9rem;
+  padding:8px 15px;
+  border-radius:50px;
+  display:inline-block;
+  background:rgba(255,255,255,.1);
+}
+
+@media(max-width:768px){
+
+  .dashboard-title{
+    font-size:2rem;
+  }
+
+  .sensor-value{
+    font-size:2.2rem;
+  }
+
+}
